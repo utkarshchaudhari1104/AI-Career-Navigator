@@ -1,32 +1,50 @@
-# React + TypeScript + Vite
+# AI Career Navigator
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+AI Career Navigator is a React and TypeScript platform that helps students plan their careers.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Career recommendations
+- Profile and skill tracking
+- Career assessment
+- Skill gap analysis
+- Learning roadmap
+- Company recommendations and details
+- Saved user accounts for local development
+- Express and MongoDB backend
 
-## React Compiler
+## Run the project
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install the packages:
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Start the frontend and backend:
+
+```bash
+npm run dev
+```
+
+The frontend runs at `http://localhost:5173`.
+
+The backend runs at `http://localhost:5000`.
+
+## Build the project
+
+```bash
+npm run build
+```
+
+## Environment variables
+
+Copy `.env.example` to `.env` and update the values if needed:
+
+```env
+PORT=5000
+MONGO_URI=mongodb://127.0.0.1:27017/ai-career
+CLIENT_URL=http://localhost:5173
+```
+
+The app can still run in demo mode when MongoDB is not running locally.
